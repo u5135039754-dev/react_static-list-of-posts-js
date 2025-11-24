@@ -1,13 +1,13 @@
 import './UserInfo.scss';
 
-export const UserInfo = ({ user, post }) => {
+export const UserInfo = ({ user }) => {
   if (!user) {
     return null; // або якийсь fallback
   }
 
   return (
-    <a className="UserInfo" href={`mailto:${post.user.email}`}>
-      {post.user.name}
+    <a className="UserInfo" href={`mailto:${user.email}`}>
+      {user.name}
     </a>
   );
 };
